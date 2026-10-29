@@ -11,3 +11,10 @@ The native package has version `VERSION+native1`; the generic release uses `VERS
 `Replaces: infiltrator-calendar-resources` permits dpkg to transfer this provider's existing path from the old combined package without deleting the other providers. Removing this package removes its own module; removing a consumer does not. Reinstalling the legacy combined package is not the independent upgrade path; InfiltratorOS now installs the independent providers. Common's source implementation is preserved.
 
 The release workflow installs and tests the exact native `.run` on Ubuntu 24.04, seals the three qualified artifacts, stages a draft release, verifies every remotely uploaded byte, and publishes that draft. Published releases are immutable; product changes require advancing `VERSION`. A rerun for a superseded main commit does not publish.
+
+## Two-file provider payload (v1.0.2)
+
+Only the compiled calendar `.so` and its illustrated public PDF are installed.
+Do not install README files, engineering notes, source manifests, BUILD-INFO,
+or standalone gettext files. The source archive retains those records;
+`X-Infiltrator-*` Debian control fields carry native-build provenance.

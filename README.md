@@ -45,3 +45,10 @@ Run `make release` to qualify and create exactly three assets in `dist/`: a port
 Run the downloaded `.run --profile aggressive` as an ordinary user. It provisions missing build prerequisites, compiles for the local CPU with `-O3`, LTO and measured two-pass PGO, checks the final module, then installs a native Debian package through sudo. InfiltratorOS invokes `--profile aggressive --system-package-mode` from its serialized installation worker. `--build-only --output DIRECTORY` qualifies a native package without installing it.
 
 Each package owns only this provider and its passive documentation. Its `Replaces` declaration transfers this module from `infiltrator-calendar-resources` on existing machines; other modules and Common source remain intact. Native package versions use `+native1` so a same-version generic package does not replace a local optimized build. See [packaging details](docs/PACKAGING.md).
+
+## Installed documentation: two-file contract (v1.0.2)
+
+The provider installs only `/System/Resources/Calendars/Buddhist Era Calendar.so` and
+`/System/Resources/Documentation/Calendar-Buddhist/Buddhist Era Calendar.pdf`.
+The PDF is a public illustrated guide. Source records, build audits, and the
+full tests remain in GitHub; native-build provenance lives in Debian metadata.
