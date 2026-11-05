@@ -49,6 +49,6 @@ Each package owns only this provider and its passive documentation. Its `Replace
 ## Installed documentation: two-file contract (v1.0.2)
 
 The provider installs only `/System/Resources/Calendars/Buddhist Era Calendar.so` and
-`/System/Resources/Documentation/Calendar-Buddhist/Buddhist Era Calendar.pdf`.
+`/System/Resources/Documentation/Calendar-Buddhist.pdfBuddhist Era Calendar.pdf`.
 The PDF is a public illustrated guide. Source records, build audits, and the
 full tests remain in GitHub; native-build provenance lives in Debian metadata.
