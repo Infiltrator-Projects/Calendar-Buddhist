@@ -40,6 +40,10 @@ See [audit findings](docs/FORENSIC-AUDIT.md) for corrections, numerical-model li
 
 ## Release and installation
 
+The release and qualification toolchain uses the pinned Common native C/C++
+provider verifier, C++ translation utility and shell packaging scripts, with no
+Python or Python reportlab dependency. The module retains its existing C ABI.
+
 Run `make release` to qualify and create exactly three assets in `dist/`: a portable amd64 `.deb`, a `-native-installer.run`, and a complete `-source.zip`. Linux releases are built and installed by GitHub Actions before publication.
 
 Run the downloaded `.run --profile aggressive` as an ordinary user. It provisions missing build prerequisites, compiles for the local CPU with `-O3`, LTO and measured two-pass PGO, checks the final module, then installs a native Debian package through sudo. InfiltratorOS invokes `--profile aggressive --system-package-mode` from its serialized installation worker. `--build-only --output DIRECTORY` qualifies a native package without installing it.
